@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Exercise: Mad Libs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+  </head>
+ <body>
+<div class="container">
+<h2>JavaScript Exercise: Mad Libs</h2>
+
+<p>The goal of this exercise is to make a Mad Libs generator.</p>
+<p>The second half of <A href="http://www.teaching-materials.org/javascript/slides/animevents.html">these slides</a> may be useful.</p>
+
+<ul>
+ <li>Start with this webpage, which has several input elements and a button:
+ <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot; /&gt;
+  &lt;title&gt;&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+ 
+ &lt;h1&gt;Mad Libs&lt;/h1&gt;
+ 
+ &lt;ul&gt;
+  &lt;li&gt;Noun: &lt;input type=&quot;text&quot; id=&quot;noun&quot;&gt;
+  &lt;li&gt;Adjective: &lt;input type=&quot;text&quot; id=&quot;adjective&quot;&gt;
+  &lt;li&gt;Someone's Name: &lt;input type=&quot;text&quot; id=&quot;name&quot;&gt;
+ &lt;/ul&gt;
+ 
+ &lt;button id=&quot;lib-button&quot;&gt;Lib it!&lt;/button&gt;
+  
+ &lt;div id=&quot;story&quot;&gt;&lt;/div&gt;
+  
+ &lt;/body&gt;
+&lt;/html&gt;</pre>
+ <li>Add a script tag to the bottom of the page for your code.
+ <li>Add an event listener to the button so that it calls a <code>makeMadLib</code> function when clicked.
+ <li>In the <code>makeMadLib</code> function, retrieve the current values of the form input elements,
+ make a story from them, and output that in the story div (like "Pamela really likes pink cucumbers.")
+</ul>
+
+<button  onclick="showSolution(1)" class="btn" style="display:none;">See Solution</button>
+<pre id="solution1" style="display:none;">
+function libIt() {
+  var storyDiv = document.getElementById("story");
+  var name = document.getElementById("name").value;
+  var adjective = document.getElementById("adjective").value;
+  var noun = document.getElementById("noun").value;
+  storyDiv.innerHTML = name + " married a " + adjective + " " + noun + "... So weird!";
+}
+
+var libButton = document.getElementById('lib-button');
+libButton.addEventListener('click', libIt);
+</pre>
+
+  </body>
+</html>
