@@ -24,3 +24,5 @@ going out for lunch after.
 10.  Put up a "Wall of Wisdom" with post-its, and encourage everyone to write up what they learn at the end of the PairUp.
 
 We are welcoming ideas to improve our event.  Please send us an email to gabriela.osu@gmail.com or tweet me at @EvaGZamudio
+
+![image](https://s3-us-west-1.amazonaws.com/pairuptocode/Screen+Shot+2013-11-26+at+5.14.28+PM.png)
