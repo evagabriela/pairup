@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>JavaScript Exercise: Data Visualization</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
-  </head>
- <body>
-<div class="container">
-<h2>JavaScript Exercise: Data Visualization</h2>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Exercise: Data Visualization</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+  <link href="../responsive.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container-narrow">
+    <a class="btn btn-medium btn-primary" href="../index.html">HOME</a>
+    <a class="btn btn-medium btn-danger" href="../level2.html">LEVEL 2</a>
+    <a class="btn btn-medium btn-danger" href="../level3.html">LEVEL 3</a>
+    <div class="masthead">
+      <h3 class="muted">JavaScript Exercise: Data Visualization</h3>
+    </div><!-- /masthead -->
 
-<p>The point of this exercise is to learn to read, manipulate, and visualize data in JavaScript.</p>
+    <div class="row-fluid marketing">
+      <div class="span12">
+        <p>The point of this exercise is to learn to read, manipulate, and visualize data in JavaScript.</p>
 
-<ul>
-    <li>Find an interesting dataset in some sort of text format (XML, JSON, CSV, etc). Store the dataset in your project folder. Truncate it to a reasonable length if it’s very long (i.e. 1000 rows). Some possible sources are:
-       <ul>
-         <li><a href="https://explore.data.gov/">explore.data.gov</a>
-         <li><a href="http://www.usgovxml.com/">usgovxml.com</a>
-         <li><a href="http://geocommons.com/">geocommons.com</a>
-       </ul>
-    <li>Create an empty webpage and load the dataset into your webpage using an AJAX or JSONP request. (See slides:  <a href="http://www.teaching-materials.org/ajax/">AJAX/JSONP</a>)
-     <li>Display the data as a <code>table</code> with columns for each of the attributes. (See slides: <a href="http://www.teaching-materials.org/htmlcss-1day/lesson3/slides.html#slide3">HTML Tables</a>)
-     <li>Use the tablesorter jQuery plugin to make the table sortable. (See slides: <a href="http://www.teaching-materials.org/jquery/">jQuery</a>)
-     <li>Create a form above the table which lets users filter or manipulate the data somehow, i.e. a dropdown box to only show rows matching a particular query, or a way of summing up attributes. Whatever would be useful with the data. (See slides: <a href="http://www.teaching-materials.org/javascript/slides/objectsdom.html">DOM</a>, <a href="http://www.teaching-materials.org/javascript/slides/animevents.html">Events</a>)
-     <li>Use the <a href="http://www.highcharts.com/">High Charts JS library</a> to visualize a numerical aspect of the data. <a href="http://selection.datavisualization.ch/">Or find a different library here.</a>
-     <li>If the data has a geographical aspect (locations), use the <a href="https://developers.google.com/maps/">Google Maps API</a> to plot it on a map. 
-      (See slides: <a href="http://gdisf-js-apis.appspot.com/">JS APIs</a>)
-     <li>Use Twitter Bootstrap on the site to make it prettier, styling the buttons and table.
-</ul>
-</div>
+        <ol>
+          <li>Find an interesting dataset in some sort of text format (XML, JSON, CSV, etc). Store the dataset in your project folder. Truncate it to a reasonable length if it’s very long (i.e. 1000 rows). Some possible sources are:</li>
+          <ul>
+            <li><a href="https://explore.data.gov/">explore.data.gov</a></li>
+            <li><a href="http://www.usgovxml.com/">usgovxml.com</a></li>
+            <li><a href="http://geocommons.com/">geocommons.com</a></li>
+          </ul>
+          <li>Create an empty webpage and load the dataset into your webpage using an AJAX or JSONP request. (See slides:  <a href="http://www.teaching-materials.org/ajax/">AJAX/JSONP</a>)</li>
+          <li>Display the data as a <code>table</code> with columns for each of the attributes. (See slides: <a href="http://www.teaching-materials.org/htmlcss-1day/lesson3/slides.html#slide3">HTML Tables</a>)</li>
+          <li>Use the tablesorter jQuery plugin to make the table sortable. (See slides: <a href="http://www.teaching-materials.org/jquery/">jQuery</a>)</li>
+          <li>Create a form above the table which lets users filter or manipulate the data somehow, i.e. a dropdown box to only show rows matching a particular query, or a way of summing up attributes. Whatever would be useful with the data. (See slides: <a href="http://www.teaching-materials.org/javascript/slides/objectsdom.html">DOM</a>, <a href="http://www.teaching-materials.org/javascript/slides/animevents.html">Events</a>)</li>
+          <li>Use the <a href="http://www.highcharts.com/">High Charts JS library</a> to visualize a numerical aspect of the data. <a href="http://selection.datavisualization.ch/">Or find a different library here.</a></li>
+          <li>If the data has a geographical aspect (locations), use the <a href="https://developers.google.com/maps/">Google Maps API</a> to plot it on a map. 
+          (See slides: <a href="http://gdisf-js-apis.appspot.com/">JS APIs</a>)</li>
+          <li>Use Twitter Bootstrap on the site to make it prettier, styling the buttons and table.</li>
+        </ol>
+        <hr>
+      </div><!-- /span12 -->
+    </div><!-- /row-fluid marketing -->
+  </div> <!-- /container -->
 
-<script src="/share.js"></script>
+  <script src="/share.js"></script>
 
-
-  </body>
+</body>
 </html>
