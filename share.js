@@ -26,7 +26,5 @@ $(document).ready(function(){
     }
   }
 
-  alert();
-
   $("#showSolution").on("click", showSolution);
 });
