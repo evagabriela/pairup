@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>JavaScript Exercise: Youtube Player</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
-  </head>
- <body>
-<div class="container">
-      <h1>Exercise: Youtube Player</h1>
-      <br><br>
+<head>
+  <meta charset="utf-8">
+  <title>Exercise: Youtube Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="../share.js"></script>
+  <!-- Le styles -->
+  <link href="../main.css" rel="stylesheet">
+  <link href="../responsive.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <a class="btn btn-medium btn-primary" href="../index.html">HOME</a>
+    <a class="btn btn-medium btn-danger" href="../Level2.html">LEVEL 2</a>
+    <a class="btn btn-medium btn-danger" href="../Level3.html">LEVEL 3</a>
+    <div class="masthead">
+      <h3 class="muted">Exercise: Youtube Player</h3>
+    </div><!-- /masthead -->
 
-      <p>In this exercise, you'll try to bring in Youtube video information using their JSON API. 
-      You may find <a href="http://gdisf-js-apis.appspot.com/">these slides</a> useful.</p>
+    <p>In this exercise, you'll try to bring in Youtube video information using their JSON API. You may find <a href="http://gdisf-js-apis.appspot.com/">these slides</a> useful.</p>
 
-      <ol>
-        <li>Start with <a href="http://www.teaching-materials.org/ajax/jsapis_solution.html">this file</a>.</li>
-        <li>Go to <a href="https://developers.google.com/youtube/2.0/developers_guide_jsonc">the Youtube API docs</a> and read through them. Look at the sample output and the example URLs for the API. Find a URL that will give you search results, and test that out in the browser.
-        </li>
-        <li>The webpage currently brings in video information using the jQuery $.ajax function to bring in a local videos.json file into the page. Change that function so that it instead brings in the results of a Youtube API search from the Youtube servers and displays those results instead. Search for whatever you fancy, but limit the search to 5 results.
-          <br>Tips: Remember that the JSON that the Youtube API returns will be different than the JSON format of videos.json. You should console.log inside your callback to see what the data looks like and make sure you're using it correctly. In particular, check how they store the ID, the author, and the rating.
-        </li>
-        <li>Bonus: Create your own playlist on Youtube of your favorite videos, and bring that into the page instead.
-        </li>
-        <li>Bonus: Add a search button to the page so that people can search for any query.</li>
-      </ol>
+    <ol>
+      <li>Start with <a href="http://www.teaching-materials.org/ajax/jsapis_solution.html">this file</a>.</li>
+      <li>Go to <a href="https://developers.google.com/youtube/2.0/developers_guide_jsonc">the Youtube API docs</a> and read through them. Look at the sample output and the example URLs for the API. Find a URL that will give you search results, and test that out in the browser.</li>
+      <li>The webpage currently brings in video information using the jQuery $.ajax function to bring in a local videos.json file into the page. Change that function so that it instead brings in the results of a Youtube API search from the Youtube servers and displays those results instead. Search for whatever you fancy, but limit the search to 5 results.
+        <br>Tips: Remember that the JSON that the Youtube API returns will be different than the JSON format of videos.json. You should console.log inside your callback to see what the data looks like and make sure you're using it correctly. In particular, check how they store the ID, the author, and the rating.
+      </li>
+      <li>Bonus: Create your own playlist on Youtube of your favorite videos, and bring that into the page instead.</li>
+      <li>Bonus: Add a search button to the page so that people can search for any query.</li>
+    </ol>
 
-      <p>Make sure that you use your browser developer tools to make debugging easier
-while working on this. Check for errors, and use console.log() to figure out
-how far your code makes it, and what the values of your variables are along the way.</p>
+    <p>Make sure that you use your browser developer tools to make debugging easier while working on this. Check for errors, and use console.log() to figure out how far your code makes it, and what the values of your variables are along the way.</p>
 
-</div>
-  <script src="/share.js"></script>
-  
-  </body>
+  </div><!-- /container -->
+</body>
 </html>
