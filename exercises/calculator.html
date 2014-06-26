@@ -1,98 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>JavaScript Exercise: The Calculator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
-  </head>
- <body>
-<div class="container">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Exercise: The Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="../share.js"></script>
+  <!-- Le styles -->
+  <link href="../main.css" rel="stylesheet">
+  <link href="../responsive.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <a class="btn btn-medium btn-primary" href="../index.html">HOME</a>
+    <a class="btn btn-medium btn-success" href="../Level1.html">LEVEL 1</a>
+    <a class="btn btn-medium btn-danger" href="../Level3.html">LEVEL 3</a>
 
-<h2 class="page-header">The Calculator</h2>
+    <div class="masthead">
+      <h3 class="muted">The Calculator</h3>
+    </div><!-- /masthead -->
 
-<p>You can use something like <a href="http://repl.it">repl.it</a> to code this so that you don't need to worry
-about making a webpage, or you can create a whole webpage for it, with inputs and buttons.
-You may want to start off with just JS and then add the UI later, but it's up to you.</p>
+    <p>You can use something like <a href="http://repl.it">repl.it</a> to code this so that you don't need to worry about making a webpage, or you can create a whole webpage for it, with inputs and buttons. You may want to start off with just JS and then add the UI later, but it's up to you.</p>
 
-<p>You may find <a href="http://www.teaching-materials.org/javascript/slides/varsfunctions.html">these slides</a> useful.</p>
+    <p>You may find <a href="http://www.teaching-materials.org/javascript/slides/varsfunctions.html">these slides</a> useful.</p>
 
-<ul>
- <li>Write a function called <code>squareNumber</code> that will take one argument (a number),
- square that number, and return the result. It should also log a string like "The result of squaring the number 3 is 9."
- <li>Write a function called <code>halfNumber</code> that will take one argument (a number),
- divide it by 2, and return the result. It should also log a string like "Half of  5 is 2.5.".
- <li>Write a function called <code>percentOf</code> that will take two numbers, figure out what percent the
- first number represents of the second number, and return the result. It should also log a string like "2 is 50% of 4."
- <li>Write a function called <code>areaOfCircle</code> that will take one argument (the radius), calculate the area based on that,
- and return the result. It should also log a string like "The area for a circle with radius 2 is 12.566370614359172."
-  <ul><li>Bonus: Round the result so there are only two digits after the decimal.</li></ul>
- <li>Write a function that will take one argument (a number) and perform the following operations, using the functions
- you wrote earlier1:
+    <ol>
+      <li>Write a function called <code>squareNumber</code> that will take one argument (a number), square that number, and return the result. It should also log a string like "The result of squaring the number 3 is 9."</li>
+      <li>Write a function called <code>halfNumber</code> that will take one argument (a number), divide it by 2, and return the result. It should also log a string like "Half of  5 is 2.5."</li>
+      <li>Write a function called <code>percentOf</code> that will take two numbers, figure out what percent thebfirst number represents of the second number, and return the result. It should also log a string like "2 is 50% of 4."</li>
+      <li>Write a function called <code>areaOfCircle</code> that will take one argument (the radius), calculate the area based on that, and return the result. It should also log a string like "The area for a circle with radius 2 is 12.566370614359172"</li>
+      <ul>
+        <li>Bonus: Round the result so there are only two digits after the decimal.</li>
+      </ul>
+      <li>Write a function that will take one argument (a number) and perform the following operations, using the functions you wrote earlier1:</li>
       <ol>
-       <li>Take half of the number and store the result.
-       <li>Square the result of #1 and store that result.
-       <li>Calculate the area of a circle with the result of #2 as the radius.
-       <li>Calculate what percentage that area is of the squared result (#3).
+       <li>Take half of the number and store the result.</li>
+       <li>Square the result of #1 and store that result.</li>
+       <li>Calculate the area of a circle with the result of #2 as the radius.</li>
+       <li>Calculate what percentage that area is of the squared result (#3).</li>
       </ol>
-</ul>
-<button class="btn" style="display:none;" onclick="showSolution(1)">See Solution</button>
-<br><br>
-<pre id="solution1" style="display:none;">
-function squareNumber(num) {
-    var squaredNumber = num * num;
-    console.log('The result of squaring the number ' + num + ' is ' + squaredNumber);
-    return squaredNumber;
-}
+    </ol>
+    <button class="btn" id="showSolution">See Solution</button>
+    <pre id="solution" style="display:none;">
+      function squareNumber(num) {
+          var squaredNumber = num * num;
+          console.log('The result of squaring the number ' + num + ' is ' + squaredNumber);
+          return squaredNumber;
+      }
 
-squareNumber(3);
+      squareNumber(3);
 
-function halfOf(num) {
-    var half = num / 2;
-    console.log('Half of ' + num + ' is ' +  half);
-    return half;
-}
+      function halfOf(num) {
+          var half = num / 2;
+          console.log('Half of ' + num + ' is ' +  half);
+          return half;
+      }
 
-halfOf(5);
+      halfOf(5);
 
-function percentOf(num1, num2) {
-    var percent = (num1/num2) * 100;
-    console.log(num1 + ' is ' + percent + '% of ' + num2);
-    return percent;
-}
+      function percentOf(num1, num2) {
+          var percent = (num1/num2) * 100;
+          console.log(num1 + ' is ' + percent + '% of ' + num2);
+          return percent;
+      }
 
-percentOf(5, 10);
+      percentOf(5, 10);
 
-function areaOfCircle(radius) {
-    var area = Math.PI * squareNumber(radius);
-    console.log('The area of circle with radius ' + radius + ' is ' + area);
-    return area;
-}
+      function areaOfCircle(radius) {
+          var area = Math.PI * squareNumber(radius);
+          console.log('The area of circle with radius ' + radius + ' is ' + area);
+          return area;
+      }
 
-areaOfCircle(2);
+      areaOfCircle(2);
 
-function doCrazyStuff(num) {
-    var half    = halfOf(num);
-    var squared = squareNumber(half);
-    var area    = areaOfCircle(squared);
-    var result  = percentOf(squared, area);
-}
+      function doCrazyStuff(num) {
+          var half    = halfOf(num);
+          var squared = squareNumber(half);
+          var area    = areaOfCircle(squared);
+          var result  = percentOf(squared, area);
+      }
 
-doCrazyStuff(5);
-</pre>
-
-  <script>
-
-function showSolution(num) {
-  if (confirm('You surrrrre?')) {
-    document.getElementById('solution' + num).style.display = 'block';
-  }
-}
-  </script>
-
-  <script src="/share.js"></script>
-  
+      doCrazyStuff(5);
+    </pre>
   </body>
 </html>
