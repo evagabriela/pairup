@@ -1,71 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>CSS: Media Queries Exercise</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container">
-        <h1>CSS: Media Queries Exercise</h1>
-        <p>The goal of this exercise is to use CSS media queries to make a webpage appear
-        different for printing and for different window sizes.
-        </p>
-        <p>You may want to consult <a href="http://www.teaching-materials.org/csstools/#slide3">these slides</a>.
-        </p>
+<head>
+  <meta charset="utf-8">
+  <title>CSS: Media Queries Exercise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="../share.js"></script>
+  <!-- Le styles -->
+  <link href="../main.css" rel="stylesheet">
+  <link href="../responsive.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <a class="btn btn-medium btn-primary" href="../index.html">HOME</a>
+    <a class="btn btn-medium btn-danger" href="../level2.html">LEVEL 2</a>
+    <a class="btn btn-medium btn-danger" href="../level3.html">LEVEL 3</a>
+    <div class="masthead">
+      <h3 class="muted">CSS: Media Queries Exercise</h3>
+    </div><!-- /masthead -->
+    <p>The goal of this exercise is to use CSS media queries to make a webpage appeardifferent for printing and for different window sizes.</p>
+    <p>You may want to consult <a href="http://www.teaching-materials.org/csstools/#slide3">these slides</a>.</p>
 
-        <ul>
-            <li>Start with <a href="http://www.teaching-materials.org/csstools/exercise_media_before.html">this webpage</a>,
-            which already has HTML and CSS for a header, navigation, content, sidebar, and footer. This is what it looks like:
-            <p>
-            <img src="http://dl.dropbox.com/u/10998095/Screenshots/f8_u1e22y4bw.png" style="border:1px solid black;">
-            </p>
-            <br><br>
-            <li>Add a CSS media query and appropriate styles so that the webpage looks like the screenshot below when printed.
-            Specifically:
-            <ul>
-                <li>The header, navigation, and footer should be hidden.
-                <li>The sidebar should display under the main content.
-            </ul>
-            <p>
-            <img src="http://dl.dropbox.com/u/10998095/Screenshots/u4i82nrsa6at.png">
-            </p>
-            <br><br>
-            <li>Add a CSS media query and appropriate styles so that the webpage looks like the screenshots below 
-            when resized to smaller widths.
-            Specifically: 
-                <ul>
-                    <li>The sidebar should be hidden.
-                    <li>The body should have no padding.
-                    <li>The images shouldn't exceed the width of the window.
-                    <li>The navigation items should each be on their own line.
-                    <li>The header should be fixed, so that it stays at the top after scrolling.
-                </ul>
-            <p>
-            <img src="http://dl.dropbox.com/u/10998095/Screenshots/cpe39ou_1igz.png">
-            </p>
-            <br><br>
-        </ul>
-         
-  <button class="btn" onclick="showSolution();" style="display:none;">Show Solution</button>
-   
-   <div id="solution" style="display:none; margin-top: 20px;">
-   <a href="exercise_media_solution.html" target="_blank">View Solution in New Window</a>
-   </p>
-   
-    <script>
-function showSolution() {
-  if (confirm('You surrrrre?')) {
-    document.getElementById('solution').style.display = 'block';
-    window.scrollTo(0, document.body.scrollHeight);
-  }
-}
-    </script>
-    </div>
+    <ol>
+      <li>Start with <a href="http://www.teaching-materials.org/csstools/exercise_media_before.html">this webpage</a>,
+      which already has HTML and CSS for a header, navigation, content, sidebar, and footer. This is what it looks like:</li>
+      <p>
+        <img src="http://dl.dropbox.com/u/10998095/Screenshots/f8_u1e22y4bw.png" style="border:1px solid black;">
+      </p>
+      <li>Add a CSS media query and appropriate styles so that the webpage looks like the screenshot below when printed.
+      Specifically:</li>
+      <ul>
+        <li>The header, navigation, and footer should be hidden.</li>
+        <li>The sidebar should display under the main content.</li>
+      </ul>
+      <p>
+        <img src="http://dl.dropbox.com/u/10998095/Screenshots/u4i82nrsa6at.png">
+      </p>
+      <li>Add a CSS media query and appropriate styles so that the webpage looks like the screenshots below when resized to smaller widths. Specifically:</li>
+      <ul>
+        <li>The sidebar should be hidden.</li>
+        <li>The body should have no padding.</li>
+        <li>The images shouldn't exceed the width of the window.</li>
+        <li>The navigation items should each be on their own line.</li>
+        <li>The header should be fixed, so that it stays at the top after scrolling.</li>
+      </ul>
+      <p>
+        <img src="http://dl.dropbox.com/u/10998095/Screenshots/cpe39ou_1igz.png">
+      </p>
+    </ol>
+       
+<!--     <button class="btn" id="showSolution">Show Solution</button> -->
+ 
+    <div id="solution" style="display:none; margin-top: 20px;">
+      <a href="exercise_media_solution.html" target="_blank">View Solution in New Window</a>
+    </div><!-- /solution -->
+  </div><!-- /container -->
 
-    <script src="/share.js"></script>
-  </body>
+</body>
 </html>
 
