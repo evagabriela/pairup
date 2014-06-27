@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Exercise: The Word Guesser</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="../share.js"></script>
+  <!-- Le styles -->
+  <link href="../main.css" rel="stylesheet">
+  <link href="../responsive.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <a class="btn btn-medium btn-primary" href="../index.html">HOME</a>
+    <a class="btn btn-medium btn-success" href="../Level1.html">LEVEL 1</a>
+    <a class="btn btn-medium btn-danger" href="../Level3.html">LEVEL 3</a>
+
+    <div class="masthead">
+      <h3 class="muted">The Word Guesser</h3>
+    </div><!-- /masthead -->
+
+    <p>You'll create a simple word guessing game where the user gets infinite tries to guess the word (like Hangman without the hangman, or like Wheel of Fortune without the wheel and fortune).</p>
+
+    <ol>
+      <li>Create two global arrays: one to hold the letters of the word (e.g. 'F', 'O', 'X'), and one to hold the current guessed letters (e.g. it would start with '_', '_', '_' and end with 'F', 'O', 'X').</li>
+      <li>Write a function called <code>guessLetter</code> that will:</li>
+      <ul>
+        <li>Take one argument, the guessed letter.</li>
+        <li>Iterate through the word letters and see if the guessed letter is in there.</li>
+        <li>If the guessed letter matches a word letter, changed the guessed letters array to reflect that.</li>
+        <li>When it's done iterating, it should log the current guessed letters ('F__') and congratulate the user if they found a new letter.</li>
+        <li>It should also figure out if there are any more letters that need to be guessed, and if not, it should congratulate the user for winning the game.</li>
+      </ul>
+      <li>Pretend you don't know the word, and call <code>guessLetter</code> multiple times with various letters to check that your program works.</li>
+      <li><b>Bonus:</b> Make it more like Wheel of Fortune: </li>
+      <ul>
+        <li>Start with a reward amount of $0</li>
+        <li>Every time a letter is guessed, generate a random amount and reward the user if they found a letter (multiplying the reward if multiple letters found), otherwise subtract from their reward.</li>
+        <li>When they guess the word, log their final reward amount.</li>
+      </ul>
+      <li><b>Bonus:</b> Make it like Hangman:</li>
+      <ul>
+        <li>Keep track of all the guessed letters (right and wrong) and only let the user guess a letter once. If they guess a letter twice, do nothing.</li>
+        <li>Keep track of the state of the hangman as a number (starting at 0), and subtract or add to that number every time they make a wrong guess.</li>
+        <li>Once the number reaches 6 (a reasonable number of body parts for a hangman), inform the user that they lost and show a hangman on the log.</li>
+      </ul>
+    </ol>
+
+    <button class="btn" id="showSolution">See Solution</button>
+    <pre id="solution" style="display:none;">
+      var wordLetters     = ['G', 'O', 'A', 'T'];
+      var guessedLetters  = ['_', '_', '_', '_'];
+
+      function guessLetter(letter) {
+          var goodGuess = false;
+          var moreToGuess = false;
+          for (var i = 0; i &lt; wordLetters.length; i++) {
+              if (wordLetters[i] == letter) {
+                  guessedLetters[i] = letter;
+                  goodGuess = true;
+              }
+              if (guessedLetters[i] == '_') {
+                  moreToGuess = true;
+              }
+          }
+          if (goodGuess) {
+              console.log('Yay, you found a letter!');
+              console.log(guessedLetters.join(''));
+              if (!moreToGuess) {
+                  console.log('YOU WON!');
+              } 
+          } else {
+              console.log('Oh noes, thats not right!');
+          }
+      }
+
+      guessLetter('G');
+      guessLetter('I');
+      guessLetter('O');
+      guessLetter('A');
+      guessLetter('T');
+    </pre>
+ </div><!-- /container -->
+
+</body>
+</html>

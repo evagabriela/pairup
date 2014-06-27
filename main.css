@@ -6161,3 +6161,7 @@ a.badge:focus {
 .affix {
   position: fixed;
 }
+
+p {
+  padding-top: 10px;
+}

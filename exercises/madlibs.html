@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Exercise: Mad Libs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="../main.css" rel="stylesheet">
+  <link href="../responsive.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="../share.js"></script>
+</head>
+<body>
+  <div class="container">
+    <a class="btn btn-medium btn-primary" href="../index.html">HOME</a>
+    <a class="btn btn-medium btn-success" href="../Level1.html">LEVEL 1</a>
+    <a class="btn btn-medium btn-danger" href="../Level3.html">LEVEL 3</a>
+    <div class="masthead">
+      <h3 class="muted">JavaScript Exercise: Mad Libs</h3>
+    </div><!-- /masthead -->
+    <p>The goal of this exercise is to make a Mad Libs generator.</p>
+    <p>The second half of <A href="http://www.teaching-materials.org/javascript/slides/animevents.html">these slides</a> may be useful.</p>
+
+  <ol>
+    <li>Start with this webpage, which has several input elements and a button:</li>
+    <pre>
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+      &nbsp;&nbsp;&lt;meta charset=&quot;utf-8&quot; /&gt;
+      &nbsp;&nbsp;&lt;title&gt;&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+      &nbsp;&nbsp;&lt;h1&gt;Mad Libs&lt;/h1&gt;
+      &nbsp;&nbsp;&lt;ul&gt;
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Noun: &lt;input type=&quot;text&quot; id=&quot;noun&quot;&gt;
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Adjective: &lt;input type=&quot;text&quot; id=&quot;adjective&quot;&gt;
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Someone's Name: &lt;input type=&quot;text&quot; id=&quot;name&quot;&gt;
+      &nbsp;&nbsp;&lt;/ul&gt;
+      &nbsp;&nbsp;&lt;button id=&quot;lib-button&quot;&gt;Lib it!&lt;/button&gt;
+      &nbsp;&nbsp;&lt;div id=&quot;story&quot;&gt;&lt;/div&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+    </pre>
+    <li>Add a script tag to the bottom of the page for your code.</li>
+    <li>Add an event listener to the button so that it calls a <code>makeMadLib</code> function when clicked.</li>
+    <li>In the <code>makeMadLib</code> function, retrieve the current values of the form input elements, make a story from them,
+      and output that in the story div (like "Pamela really likes pink cucumbers.")</li>
+  </ol>
+
+  <button id="showSolution" class="btn">See Solution</button>
+  <pre id="solution" style="display:none;">
+    function libIt() {
+      var storyDiv = document.getElementById("story");
+      var name = document.getElementById("name").value;
+      var adjective = document.getElementById("adjective").value;
+      var noun = document.getElementById("noun").value;
+      storyDiv.innerHTML = name + " married a " + adjective + " " + noun + "... So weird!";
+    }
+
+    var libButton = document.getElementById('lib-button');
+    libButton.addEventListener('click', libIt);
+  </pre>
+  
+</body>
+</html>
