@@ -3,7 +3,7 @@ $(document).ready(function(){
   var disqus_shortname = 'pairup';
   var mainDiv = document.getElementsByTagName('div')[0];
 
-  var shareLink = '<br><p>All done? (Or close enough?) <a href="javascript:loadShare()"><strong>Share what you made with everyone!</a></strong></p>';
+  var shareLink = '<br><p id="share">All done? (Or close enough?) <a href="javascript:loadShare()"><strong>Share what you made with everyone!</a></strong></p>';
   mainDiv.innerHTML += shareLink;
 
   function loadShare() {
@@ -27,4 +27,5 @@ $(document).ready(function(){
   }
 
   $("#showSolution").on("click", showSolution);
+  $("#share").on("click", loadShare);
 });
