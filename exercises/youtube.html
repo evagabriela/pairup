@@ -25,8 +25,9 @@
     <p>In this exercise, you'll try to bring in Youtube video information using their JSON API. You may find <a href="http://gdisf-js-apis.appspot.com/">these slides</a> useful.</p>
 
     <ol>
-      <li>Start with <a href="http://pamelafox.github.io/teaching-materials/ajax/json_solution.html">this file</a>.</li>
-      <li>Go to <a href="https://developers.google.com/youtube/2.0/developers_guide_jsonc">the Youtube API docs</a> and read through them. Look at the sample output and the example URLs for the API. Find a URL that will give you search results, and test that out in the browser.</li>
+      <li>Start with <a href="http://www.teaching-materials.org/apis/htmlapis_starter.html">this file</a>.</li>
+      <li>Note: Before you explore the YouTube API, you need to check <a href="https://console.developers.google.com">Developers Console</a> and create the appropriate credentials to ping the API.</li>
+      <li>Go to <a href="https://developers.google.com/youtube/v3/getting-started">the Youtube API docs</a> and read through them. Look at the sample output and the example URLs for the API. Find a URL that will give you search results, and test that out in the browser.</li>
       <li>The webpage currently brings in video information using the jQuery $.ajax function to bring in a local videos.json file into the page. Change that function so that it instead brings in the results of a Youtube API search from the Youtube servers and displays those results instead. Search for whatever you fancy, but limit the search to 5 results.
         <br>Tips: Remember that the JSON that the Youtube API returns will be different than the JSON format of videos.json. You should console.log inside your callback to see what the data looks like and make sure you're using it correctly. In particular, check how they store the ID, the author, and the rating.
       </li>
